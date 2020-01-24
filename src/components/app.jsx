@@ -1,9 +1,9 @@
 import React from 'react';
 
-const App = () =>
+const App = ({FontAwesomeIcon}) =>
 (
-  <div>
-      <h1 className="title">teste</h1>
+  <div className='container'>
+     <h1>Teste</h1>
   </div>
 )
 

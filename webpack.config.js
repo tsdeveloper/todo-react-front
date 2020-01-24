@@ -26,10 +26,15 @@ module.exports = {
           },
         ],
       },
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader" },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader" },
       {
-        test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
-        loader: 'file'
-      },
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          'file-loader?name=images/[name].[ext]',
+          'image-webpack-loader?bypassOnDebug'
+        ]
+      }
     ]
   },
   resolve: {
