@@ -1,14 +1,19 @@
+
+import './assets/main.scss';
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './assets/main.scss';
-
-
-import * as serviceWorker from './serviceWorker';
 import App from './components/app';
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const title = 'React 16 with Webpack and Babel 7';
+
+
+ReactDOM.render(
+  <App title={title} />,
+  document.getElementById('app')
+);
+module.hot.accept();
