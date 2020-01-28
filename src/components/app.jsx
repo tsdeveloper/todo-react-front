@@ -1,14 +1,11 @@
 import React from 'react';
-import Menu from '../template/menu';
-import Routes from '../components/routes';
-import {Router, Switch, Route} from 'react-router-dom';
-import { createBrowserHistory } from 'history';
-
+import Todo from './todo/todo'
+import About from './about/about'
 const App = ({FontAwesomeIcon}) =>
 (
   <div className='container'>
-    <Menu />
-    <Routes />
+    <Todo />
+    <About />
   </div>
 )
 
